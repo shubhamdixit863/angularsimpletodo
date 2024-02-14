@@ -13,12 +13,18 @@ export class TasksComponent {
 
   addTask(){
     this.tasks.push(this.newTask)
+    this.newTask=""
   }
 
   deleteTask(task:string){
     this.tasks=this.tasks.filter(ele=>ele!=task);
    
-
   }
+
+  editTask(task:string){
+    this.newTask=task;
+   
+  }
+
 
 }
